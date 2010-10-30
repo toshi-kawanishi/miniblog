@@ -10,11 +10,16 @@ describe "posts/show.html.erb" do
 
   it "shows the destination" do
     render
-    rendered.should match(/ruby/)
-    rendered.should match(/rails/)
-    rendered.should match(/on/)
-    rendered.should match(/\(4\)/)
-    rendered.should match(/\(3\)/)
-    rendered.should match(/\(2\)/)
+
+    rendered.should have_selector('ul')
+    rendered.should have_selector('li')
+    rendered.should have_selector('span')
+
+    rendered.should contain("ruby")
+    rendered.should contain("rails")
+    rendered.should contain("on")
+    rendered.should contain("(4)")
+    rendered.should contain("(3)")
+    rendered.should contain("(2)")
   end
 end
