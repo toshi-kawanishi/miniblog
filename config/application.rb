@@ -38,5 +38,11 @@ module Miniblog
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Configure rspec
+    config.generators do |g|
+      g.test_framework  :rspec, :fixture => true
+    end
+
   end
 end
