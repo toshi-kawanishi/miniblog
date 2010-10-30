@@ -11,9 +11,9 @@
 </p>
 
 <ul class="word_count">
-  <li><span>ruby</span><span>(4)</span></li>
-  <li><span>rails</span><span>(3)</span></li>
-  <li><span>on</span><span>(2)</span></li>
+  <% @post.count_words.each do |word, count| %>
+    <li><span><%= word %></span><span>(<%= count %>)</span></li>
+  <% end %>
 </ul>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
