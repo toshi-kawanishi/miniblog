@@ -13,7 +13,10 @@ class Post < ActiveRecord::Base
         content_dict[w] = 1
       end
     end
-    return content_dict
+    results = content_dict.sort do |e1, e2|
+      e1[1] <=> e2[1]
+    end
+    results.reverse
   end
 
   def split_content

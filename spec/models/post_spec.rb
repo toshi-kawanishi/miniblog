@@ -38,30 +38,30 @@ describe Post,"count_words が呼ばれた時" do
   it "count_words が rails=4, ruby=3, on=2 を返す" do
     post = posts(:short_content)
     actual = post.count_words()
-    expected = {
+    expected = Array(
       "rails" => 4,
       "ruby" => 3,
       "on" => 2
-    }
+    )
     actual.should == expected
   end
 
   it "count_words が hoge=20 を返す" do
     post = posts(:hoge_20)
     actual = post.count_words()
-    expected = {
+    expected = Array(
       "hoge" => 20
-    }
+    )
     actual.should == expected
   end
 
   it "count_words が hoge=15, fuga=5 を返す" do
     post = posts(:hoge_fuga)
     actual = post.count_words()
-    expected = {
+    expected = Array(
       "hoge" => 15,
       "fuga" => 5
-    }
+    )
     actual.should == expected
   end
 end
