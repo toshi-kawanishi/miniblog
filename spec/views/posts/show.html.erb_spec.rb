@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe "posts/show.html.erb" do
@@ -8,7 +9,7 @@ describe "posts/show.html.erb" do
     ))
   end
 
-  it "shows the destination" do
+  it "頻出単語を表示する" do
     render
 
     rendered.should have_selector('ul')

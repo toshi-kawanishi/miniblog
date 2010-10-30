@@ -4,22 +4,25 @@ class Post < ActiveRecord::Base
   validates_presence_of :content
 
   def count_words
-    content_arr = split_content
-    content_dict = {}
-    content_arr.map do |w| 
-      if content_dict[w] 
-        content_dict[w] += 1
+    words = split_content
+    word_counts = {}
+
+    words.map do |w|
+      if word_counts[w]
+        word_counts[w] += 1
       else
-        content_dict[w] = 1
+        word_counts[w] = 1
       end
     end
-    results = content_dict.sort do |e1, e2|
+
+    results = word_counts.sort do |e1, e2|
       e1[1] <=> e2[1]
     end
+
     results.reverse[0,3]
   end
 
   def split_content
-    content.split.sort.reverse
+    content.split.sort
   end
 end
