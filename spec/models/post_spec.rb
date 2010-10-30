@@ -33,6 +33,7 @@ describe Post,"count_words が呼ばれた時" do
   fixtures :posts
 
   before(:each) do
+    pending("やんごとなき理由")
   end
 
   it "count_words が rails=4, ruby=3, on=2 を返す" do
@@ -64,7 +65,19 @@ describe Post,"count_words が呼ばれた時" do
                      )
     actual.should == expected
   end
+end
 
-
+describe Post,"split_content が呼ばれた時" do
+  fixtures :posts
+  
+  before(:each) do
+  end
+  
+  it "split_content が内容を返す" do
+    post = posts(:short_content)
+    actual = post.split_content()
+    expected = ["ruby", "ruby", "ruby", "rails", "rails", "rails", "rails", "on", "on"]
+    actual.should == expected
+  end
 end
 
