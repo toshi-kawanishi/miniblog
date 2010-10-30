@@ -15,3 +15,7 @@ title_only:
 content_only:
   title:
   content: "This is a test post."
+
+short_content:
+  title: "short_content"
+  content: "on rails ruby ruby rails rails ruby rails on"
