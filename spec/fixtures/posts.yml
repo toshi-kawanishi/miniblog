@@ -19,3 +19,14 @@ content_only:
 short_content:
   title: "short_content"
   content: "on rails ruby ruby rails rails ruby rails on"
+
+hoge_20:
+  title: "long_content"
+  content: "hoge hoge hoge hoge hoge hoge hoge hoge hoge hoge
+            hoge hoge hoge hoge hoge hoge hoge hoge hoge hoge"
+
+hoge_fuga:
+  title: "long_content"
+  content: "hoge hoge hoge hoge hoge hoge hoge hoge hoge hoge
+            hoge hoge hoge hoge hoge fuga fuga fuga fuga fuga"
+
