@@ -17,7 +17,6 @@ class Post < ActiveRecord::Base
   end
 
   def split_content
-    ["ruby", "ruby", "ruby", "rails", "rails", "rails", "rails", "on", "on"]
+    content.split.sort.reverse
   end
-
 end
