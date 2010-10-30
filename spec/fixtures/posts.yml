@@ -1,9 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  title: MyString1
-  content: MyText1
+full:
+  title: "test"
+  content: "This is a test post."
 
-two:
-  title: MyString2
-  content: MyText2
+empty:
+  title:
+  content:
+
+title_only:
+  title: "test"
+  content:
+
+content_only:
+  title:
+  content: "This is a test post."
