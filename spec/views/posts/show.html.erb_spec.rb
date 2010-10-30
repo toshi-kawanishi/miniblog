@@ -3,16 +3,18 @@ require 'spec_helper'
 describe "posts/show.html.erb" do
   before(:each) do
     @post = assign(:post, stub_model(Post,
-      :title => "Title",
-      :content => "MyText"
+      :title => "short_content",
+      :content => "on rails ruby ruby rails rails ruby rails on nutshell"
     ))
   end
 
-  it "renders attributes in <p>" do
+  it "shows the destination" do
     render
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-    rendered.should match(/Title/)
-    # Run the generator again with the --webrat-matchers flag if you want to use webrat matchers
-    rendered.should match(/MyText/)
+    rendered.should match(/ruby/)
+    rendered.should match(/rails/)
+    rendered.should match(/on/)
+    rendered.should match(/\(4\)/)
+    rendered.should match(/\(3\)/)
+    rendered.should match(/\(2\)/)
   end
 end
