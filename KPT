@@ -1,0 +1,41 @@
+2010-10-30  Jxck toshikawa  <renoire@akihabara>
+
+	* Keep:
+	- Rails スゲー
+	- 事前打ち合わせ(アイデアソンと擦り合わせ、環境確認)
+	- "やること"は決めておくとすんなり始められて達成感もある
+	- ホワイトボード
+	- ChangeLog で KPT を残す
+
+	* Problem:
+	- 開発環境(kbd,.emacs)
+	- rspec-rails の細かい書き方
+	- リナカフェが空いてなかった
+	- 台風
+	- 遅刻ごめんなさい
+	- テストが遅い
+	- JSP的テンプレートはやだ
+
+	* Try:
+	- リナカフェが空いてるか調べる
+	- うまく休憩
+	- CI (autotest とか)
+	- 別のプラグインも入れてみる(haml,cucamber,etc)
+	- テストを早くしたい
+	
+	* TODO:
+	- 大文字/小文字の処理
+	- 英語で . , ! () を取る
+	- 日本語(YahooAPIで形態素解析)
+
+	* KnowHow:
+	- rspec2.x の view テストのマッチャは webrat を入れとくと、 have_selector とか使える。
+	- scaffold する前にブランチを切っておく方が良い(やり直せる)
+	- config/apprication.rb に fixture を足しておくと、 rails g で fixture も使える。
+	- Hash.sort が Array になる
+	- モデルの変数へのアクセスは getter からアクセスするため、@content ではなく content でアクセス。
+	- Array のソート時の比較指定で a <=> b は a > b は 1, a == b は 0, a < b は -1
+	- view のテストは、最初に render してから。
+	- response は rendered に、have_tag は have_selector になってる。(rails3 + rspec2 + webrat)
+	
+	  
