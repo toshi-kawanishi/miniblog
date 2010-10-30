@@ -75,7 +75,7 @@ describe Post,"split_content が呼ばれた時" do
   it "split_content が内容を返す" do
     post = posts(:short_content)
     actual = post.split_content()
-    expected = ["ruby", "ruby", "ruby", "rails", "rails", "rails", "rails", "on", "on"]
+    expected = ["ruby", "ruby", "ruby", "rails", "rails", "rails", "rails", "on", "on", "nutshell"]
     actual.should == expected
   end
 end
